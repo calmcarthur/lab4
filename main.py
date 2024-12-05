@@ -32,9 +32,7 @@ def main():
     # Input checking
     if (
         len(sys.argv) != 4 
-        or sys.argv[1] != "search" 
-        or not isinstance(sys.argv[2], str) 
-        or not isinstance(sys.argv[3], str) 
+        or sys.argv[1].lower() != "search" 
         or not sys.argv[3].endswith(".txt")):
         print("Usage: python script.py search <pattern> <filename.txt>")
         return
